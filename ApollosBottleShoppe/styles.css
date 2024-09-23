@@ -1,0 +1,330 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+}
+
+.logo {
+  height: auto;
+  max-width: 100px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+/* NAV BAR ELEMENTS */
+nav {
+  align-items: center;
+  background-color: #444;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav .left ul li a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav .left ul li a:hover {
+  color: #ddd;
+}
+
+/* Style the "CHECKOUT" text */
+nav .right a {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.cart-image {
+  height: auto;
+  padding-right: 5px;
+  width: 30px;
+}
+
+/* PRODUCTS */
+.page-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* TABLET */
+@media (min-width: 785px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1150px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product {
+  background-color: #fff; /* Add a white background to product listings */
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  min-width: 350px;
+  min-height: 250px;
+  padding: 30px;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Add a smooth background color transition on hover */
+  width: 100%;
+}
+
+.product h2 a {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.product h2 a:hover {
+  text-decoration: underline;
+}
+
+.product:hover {
+  background-color: #c4c4c4; /* Change background color on hover */
+}
+
+.product img {
+  height: auto;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+.sale-price {
+  color: red;
+  font-weight: bold;
+}
+
+.regular-price {
+  color: grey;
+}
+
+.regular-price s {
+  color: grey;
+}
+
+input[type="number"],
+input[type="checkbox"] + label {
+  font-family: "Montserrat", sans-serif;
+}
+
+label {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Styling for the sale ribbon */
+.sale-ribbon {
+  background-color: red;
+  color: white;
+  font-size: larger;
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
+}
+
+/* Adjusting product container to work with absolute positioning */
+.product.on-sale {
+  position: relative;
+}
+
+/* PRODUCT PAGES */
+.product-container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 40px;
+}
+
+.product-image {
+  flex: 1; /* takes up 50% of the width */
+  padding-right: 20px; /* some space between image and info */
+}
+
+.product-info {
+  flex: 1; /* takes up 50% of the width */
+}
+
+.detailed-description {
+  color: grey;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* QR Code */
+.qr-code {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.qr-code img {
+  max-width: 100%;
+}
+
+/* CHECKOUT PAGE */
+.cart-summary {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 50px 20px;
+}
+
+/* Style for the table */
+table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Style for table header */
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Style for table cells */
+td {
+  background-color: #f5f5f5; /* Adjusts the background color for cells */
+  border: 1px solid #ddd; /* Adjusts border color and size */
+}
+
+/* Style for the table header cells */
+th {
+  background-color: #333;
+  color: white;
+  padding: 15px; /* Adjusts padding to space out the content */
+}
+
+#clear-cart {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+#clear-cart:hover {
+  background-color: darkred;
+}
+
+/* Contact page */
+.contact-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  min-height: 60vh;
+  padding: 20px;
+}
+
+.contact-container .logo {
+  margin-right: 50px;
+  max-width: 200px;
+}
+
+.contact-form {
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  box-sizing: border-box;
+  margin: 5px 0;
+  padding: 10px;
+  width: calc(100% - 20px);
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Notes Page */
+.notes-container {
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  margin-top: 25px;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.notes-container h2 {
+  margin: 0px auto 20px;
+}
+
+.notes-container p {
+  margin-bottom: 15px;
+}
+
+.visual-purpose-message {
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  color: #555;
+}
